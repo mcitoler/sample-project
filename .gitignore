@@ -1,0 +1,10 @@
+# Private stuff
+secrets
+*.env
+
+# Jupyter stuff
+notebooks/.*
+
+# Python stuff
+*.pyc
+**/__pycache__
