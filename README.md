@@ -40,4 +40,4 @@ sample-project/
 ├── setup.cfg
 └── setup.py
 ```
-Essentially, it is the union of [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) and [Docker for Data Science](https://dl.acm.org/citation.cfm?id=3152672)
+Essentially, it is the union of [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) and [Docker for Data Science](https://dl.acm.org/citation.cfm?id=3152672).

@@ -1,7 +1,6 @@
 version: "3"
 services:
     jupyter:
-        image: occam-aims-lib
         build: docker/jupyter
         container_name: jupyter
         environment:
