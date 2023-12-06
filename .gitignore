@@ -8,3 +8,12 @@ notebooks/.*
 # Python stuff
 *.pyc
 **/__pycache__
+
+# Virtual environments
+.venv
+venv
+
+# Cache stuff
+.pytest_cache
+.mypy_cache
+.ruff_cache
