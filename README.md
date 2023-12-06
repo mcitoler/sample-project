@@ -7,12 +7,6 @@ sample-project/
 │   ├── interim
 │   ├── processed
 │   └── raw
-├── docker
-│   └── jupyter
-│       ├── Dockerfile
-│       ├── .env
-│       ├── .env.example
-│       └── requirements.txt
 ├── notebooks
 │   └── example.ipynb
 ├── references

@@ -1,7 +1,0 @@
-jupyter
-jupyter-contrib-nbextensions
-pandas
-requests
-scikit-learn
-statsmodels
-tensorflow

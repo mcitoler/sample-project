@@ -1,0 +1,6 @@
+ipykernel
+pandas
+requests
+scikit-learn
+statsmodels
+tensorflow
