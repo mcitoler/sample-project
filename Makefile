@@ -18,7 +18,7 @@ check_types:
 	poetry run -- python -m mypy --config-file=pyproject.toml $(TARGETS)
 
 lint:
-	poetry run -- python -m ruff check --config=pyproject.toml $(TARGETS)
+	poetry run -- python -m ruff check --config=pyproject.toml $(TARGETS) --output-format=
 
 test:
 	poetry run -- python -m pytest tests

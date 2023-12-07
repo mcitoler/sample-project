@@ -1,0 +1,32 @@
+name: PR check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - uses: Gr1N/setup-poetry@v8
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+      - name: Check lockfile
+        run: make check_lockfile
+      - name: Install dependencies
+        run: make install
+      - name: Check formatting
+        run: make check_format
+      - name: Lint
+        run: make lint
+      - name: Check types
+        run: make check_types
+      - name: Run tests
+        run: make test
