@@ -1,5 +1,5 @@
-from sample_project import say_hello
+from sample_project.example import say_hello
 
 
-def test_say_hello():
+def test_say_hello() -> None:
     say_hello()
