@@ -1,0 +1,35 @@
+{
+    "python.defaultInterpreterPath": "${workpaceFolder}/.venv/bin/python",
+    "python.analysis.ignore": [
+        ".venv",
+        ".mypy_cache",
+        ".pytest_cache",
+        ".ruff_cache"
+    ],
+    // Enables auto formatting on save
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    // mypy
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "mypy-type-checker.args": [
+        "--config-file=${workspaceFolder}/pyproject.toml"
+    ],
+    // ruff
+    "ruff.importStrategy": "fromEnvironment",
+    "ruff.format.args": [
+        "--config=${workspaceFolder}/pyproject.toml"
+    ],
+    "ruff.lint.args": [
+        "--config=${workspaceFolder}/pyproject.toml"
+    ]
+}
