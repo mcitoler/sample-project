@@ -15,6 +15,13 @@
 		}
 	},
 
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "make install",
+
+	// Use 'postStartCommand' to run commands after the container is started.
+	// "postStartCommand": "",
+
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -23,18 +30,19 @@
 		"vscode": {
 			"extensions": [
 				"charliermarsh.ruff",
+				"EditorConfig.EditorConfig",
 				"eamodio.gitlens",
+				"GitHub.copilot",
+				"github.vscode-github-actions",
 				"GitHub.vscode-pull-request-github",
 				"ms-python.mypy-type-checker",
 				"ms-python.python",
 				"ms-toolsai.jupyter",
 				"ms-vscode.makefile-tools",
 				"streetsidesoftware.code-spell-checker",
-				"tamasfe.even-better-toml",
-				"EditorConfig.EditorConfig"
+				"tamasfe.even-better-toml"
 			]
 		}
-
 	}
 
 	// Enable GPU
