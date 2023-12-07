@@ -14,7 +14,7 @@ warn_unused_ignores = true
 warn_return_any = true
 no_implicit_reexport = true
 strict_equality = true
-strict_concatenate = true
+extra_checks = true
 warn_unreachable = true
 
 [tool.poetry]

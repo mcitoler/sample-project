@@ -3,7 +3,7 @@
 TARGETS=src tests
 
 check_lockfile:
-	poetry lock --check
+	poetry check --lock
 
 install:
 	poetry install --with=dev --sync
@@ -18,7 +18,7 @@ check_types:
 	poetry run -- python -m mypy --config-file=pyproject.toml $(TARGETS)
 
 lint:
-	poetry run -- python -m ruff check --config=pyproject.toml $(TARGETS) --output-format=
+	poetry run -- python -m ruff check --config=pyproject.toml $(TARGETS)
 
 test:
 	poetry run -- python -m pytest tests
