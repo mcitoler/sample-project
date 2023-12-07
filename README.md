@@ -12,7 +12,7 @@ sample-project/
 ├── references
 ├── reports
 ├── secrets
-├── src
+├── sample_project
 │   ├── data
 │   │   ├── __init__.py
 │   │   └── make.py
@@ -29,9 +29,7 @@ sample-project/
 ├── .env.example
 ├── .gitignore
 ├── Makefile
-├── README.md
-├── requirements.txt
-├── setup.cfg
-└── setup.py
+├── pyproject.toml
+└── README.md
 ```
-Essentially, it is the union of [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) and [Docker for Data Science](https://dl.acm.org/citation.cfm?id=3152672).
+Based off [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) and [Docker for Data Science](https://dl.acm.org/citation.cfm?id=3152672).

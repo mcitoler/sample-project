@@ -1,7 +1,26 @@
-flake8:
-	flake8 src
+.PHONY: check_lockfile install format check_format check_types lint test
 
-mypy:
-	mypy src --config setup.cfg
+TARGETS=src tests
 
-lint: flake8 mypy
+check_lockfile:
+	poetry lock --check
+
+install:
+	poetry install --with=dev --sync
+
+format:
+	poetry run -- python -m ruff format --config=pyproject.toml $(TARGETS)
+
+check_format:
+	poetry run -- python -m ruff format --check --config=pyproject.toml $(TARGETS)
+
+check_types:
+	poetry run -- python -m mypy --config-file=pyproject.toml $(TARGETS)
+
+lint:
+	poetry run -- python -m ruff check --config=pyproject.toml $(TARGETS)
+
+test:
+	poetry run -- python -m pytest tests
+
+pr: | check_lockfile check_format lint check_types test
