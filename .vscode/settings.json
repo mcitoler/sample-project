@@ -23,7 +23,7 @@
     },
     "notebook.formatOnSave.enabled": true,
     "notebook.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": false
     },
     // mypy
     "mypy-type-checker.importStrategy": "fromEnvironment",
