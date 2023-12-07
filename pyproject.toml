@@ -41,6 +41,15 @@ ruff = "^0.1.7"
 ipykernel = "^6.27.1"
 pandera = {extras = ["mypy"], version = "^0.17.2"}
 
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py310"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.format]
+exclude = ["*.ipynb"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
